@@ -1,0 +1,105 @@
+---
+/* eslint max-lines: 'off' */
+
+import { asset } from '../lib/data';
+---
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flex-splitter-directive@0.5.1/styles.min.css">
+<script src="https://cdn.jsdelivr.net/npm/flex-splitter-directive@0.5.1"></script>
+
+
+<div
+  data-flex-splitter-vertical
+  style="height: 100vh; margin: 0;"
+>
+  <header style="max-height: 100px; min-height:50px;">
+    header (max-height: 100px; min-height:50px;)
+  </header>
+
+  <div role="separator" tabindex="1"></div>
+
+  <main
+    data-flex-splitter-horizontal
+    style="flex: auto;"
+  >
+    <div style="width: 150px;">
+      width: 150px
+    </div>
+
+    <div role="separator" tabindex="1"></div>
+
+    <div
+       data-flex-splitter-vertical
+       style="width:200px; min-width: 80px;"
+     >
+      <div style="height: 12em;" id="clock" > OK width:200px; min-width: 80px</div>
+      <div role="separator" tabindex="1"></div>
+      <div style="flex: auto;">flex: auto</div>
+    </div>
+
+    <div role="separator" tabindex="1"></div>
+
+    <div style="flex: auto;" id="sketch">
+      flex: auto
+    </div>
+
+    <div role="separator" tabindex="1"></div>
+
+    <div style="min-width: 200px; max-width: 400px;" id="todo">
+      min-width: 100px<br>max-width: 200px
+    </div>
+  </main>
+
+  <div role="separator" tabindex="1"></div>
+
+  <footer id="gantt">footer</footer>
+</div>
+
+<style>
+div {
+//background-color: #ffffff;
+color: #ffffff;
+}
+</style>
+
+<script>
+ import './src/index.tsx'
+</script>
+
+<!--
+<script type="module" src="./src/index.tsx"></script>
+-->
+<!--
+<script> 
+        import './DashBoard.client.js';
+</script>
+
+<style is:global>
+        /* chart styles */
+        .apexcharts-tooltip {
+                @apply bg-white dark:bg-gray-700 text-gray-500 dark:text-gray-400 border-0 rounded-lg shadow-lg !important; 
+        }       
+                        
+        .apexcharts-tooltip .apexcharts-tooltip-title {
+                @apply py-2 px-4 bg-gray-100 dark:bg-gray-600 border-b border-gray-200 dark:border-gray-500 !important;                             
+        }
+                                                
+        .apexcharts-xaxistooltip {      
+                @apply text-gray-500 border-0 bg-white dark:bg-gray-700 dark:text-gray-300 rounded-lg shadow-lg !important;
+        }                                       
+                                        
+        .apexcharts-tooltip .apexcharts-tooltip-text-y-value {
+                @apply dark:text-white;
+        }                               
+
+        .apexcharts-xaxistooltip-text {
+                @apply font-medium text-sm !important;
+        }                               
+                                                
+        .apexcharts-xaxistooltip:before,        
+        .apexcharts-xaxistooltip:after {        
+                @apply border-0 !important;     
+        }                               
+</style>     
+-->

@@ -1,0 +1,65 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>flex-splitter-directive - splitter control based on flexbox.</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="./src/index.ts"></script>
+    <!--
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flex-splitter-directive@0.5.1/styles.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flex-splitter-directive@0.5.1"></script>
+    -->
+  </head>
+
+<body
+  data-flex-splitter-vertical
+  style="height: 100vh; margin: 0;"
+>
+  <header style="max-height: 100px; min-height:50px;">
+    header (max-height: 100px; min-height:50px;)
+  </header>
+
+  <div role="separator" tabindex="1"></div>
+
+  <main
+    data-flex-splitter-horizontal
+    style="flex: auto;"
+  >
+    <div style="width: 150px;">
+      width: 150px
+    </div>
+
+    <div role="separator" tabindex="1"></div>
+
+    <div
+       data-flex-splitter-vertical
+       style="width:200px; min-width: 80px;"
+     >
+      <div style="height: 12em;">width:200px; min-width: 80px</div>
+      <div role="separator" tabindex="1"></div>
+      <div style="flex: auto;">flex: auto</div>
+    </div>
+
+    <div role="separator" tabindex="1"></div>
+
+    <div style="flex: auto;">
+      flex: auto
+    </div>
+
+    <div role="separator" tabindex="1"></div>
+
+    <div style="min-width: 100px; max-width: 200px;">
+      min-width: 100px<br>max-width: 200px
+    </div>
+  </main>
+
+  <div role="separator" tabindex="1"></div>
+
+  <footer>footer</footer>
+</body>
+
+
+
+
+</html>
